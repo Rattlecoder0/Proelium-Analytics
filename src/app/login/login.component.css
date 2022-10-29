@@ -1,0 +1,143 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Amaranth&family=Carme&family=Dancing+Script:wght@600&family=Encode+Sans+Semi+Condensed&family=Kanit:wght@200&family=Koulen&family=Lexend&family=Lexend+Deca:wght@200&family=Poppins:ital,wght@0,300;0,400;1,400&family=Questrial&family=Rubik:wght@300&family=Secular+One&family=Viga&display=swap');
+
+.login{
+    background-color: rgb(0, 42, 149);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.form-cont{
+    background-color: white;
+    padding: 30px;
+    width: 420px;
+    border-radius: 5px;
+}
+
+.login-head{
+    margin-bottom: 5vh;
+    text-align: center;
+    margin-top: 2vh;
+}
+.login-head h1{
+    font-size: 50px;
+    color: rgb(0, 42, 149);
+    margin-bottom: 1vh;
+    font-family: 'Michroma', sans-serif;
+    letter-spacing: 1px;
+}
+.login-head p{
+    font-family: 'Encode Sans Semi Condensed', sans-serif;
+    font-size: 35px;
+}
+
+.email-cont{
+    margin-bottom: 3vh;
+}
+.pass-cont{
+    margin-bottom: 3vh;
+}
+.email,.pass{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+input{
+    padding: 20px 0 20px 41px;
+    border-radius: 3px;
+    border: none;
+    outline: 1px solid rgb(177, 175, 175);
+    transition: .3s;
+    height: 100%;
+}
+.user,.lock{
+    position: absolute;
+    left: 3%;
+    top: 50%;
+    transform: translate(0%, -50%);
+    font-size: 18px;
+}
+.email label, .pass label{
+    font-family: 'Kanit', sans-serif;
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    transform: translate(0%, -50%);
+    font-size: 17px;
+    transition: .3s;
+    pointer-events: none;
+    background-color: white;
+    text-align: center;
+    color: rgb(120, 119, 119);
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+.email label{
+    width: 55px;
+}
+.pass label{
+    width: 80px;
+}
+    /* icons show hide password */
+.h-s-pass{
+    position: absolute;
+    right: 3%;
+    top: 50%;
+    transform: translate(0%, -50%);
+    cursor: pointer;
+}
+
+.fp{
+    text-align: right;
+    cursor: pointer;
+}
+
+.sub-btn{
+    border: none;
+    background-color: rgb(0, 42, 149);
+    color: white;
+    width: 100%;
+    padding: 15px 0;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 3.5vh;
+    margin-bottom: 2vh;
+}
+
+.e-input:focus ~ .label-email,
+.p-input:focus ~ .label-pass,
+.e-input:not(:placeholder-shown).e-input:not(:focus) ~ .label-email, 
+.p-input:not(:placeholder-shown).p-input:not(:focus) ~ .label-pass
+{
+    top: 0;
+    left: 7%;
+    font-size: 15px;
+    color: rgba(20, 20, 255, 0.824);
+}
+.e-input:focus,.p-input:focus{
+    outline-color: rgba(20, 20, 255, 0.824);
+}
+input:focus ~ :placeholder-shown{
+    font-size: 16px;
+}
+
+.err{
+    color: red;
+    font-size: 14px;
+    /* margin-top: 10px; */
+    display: block;
+}
+@media(max-width:530px){
+    .form-cont{
+        width: 80vw;
+        margin: 10px;
+    }
+}
+@media(max-width:370px){
+    .form-cont{
+        width: 70vw;
+    }
+}
